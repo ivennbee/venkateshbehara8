@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venkatesh B - Marketing Leader & GTM Specialist</title>
+    <meta name="description" content="Venkatesh B, Marketing Leader specializing in GTM Strategy, Events & Webinars, Branding, and MQL Growth." />
+    
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts: Inter for that clean, premium SaaS look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              primary: '#020617', // Slate 950
+              secondary: '#3b82f6', // Blue 500
+            },
+            animation: {
+              'fade-up': 'fadeUp 0.8s ease-out forwards',
+              'fade-down': 'fadeDown 0.8s ease-out forwards',
+              'scroll': 'scroll 30s linear infinite',
+              'dash': 'dash 1.5s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeDown: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              dash: {
+                '0%': { strokeDasharray: '1, 150', strokeDashoffset: '0' },
+                '50%': { strokeDasharray: '90, 150', strokeDashoffset: '-35' },
+                '100%': { strokeDasharray: '90, 150', strokeDashoffset: '-124' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0"
+      }
+    }
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Custom Utilities */
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px) saturate(200%);
+        -webkit-backdrop-filter: blur(20px) saturate(200%);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Hide scrollbar for clean horizontal scrolls */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Framer-inspired smooth reveal animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+        filter: blur(10px);
+        transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                    filter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        will-change: opacity, transform, filter;
+      }
+      
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+      
+      /* Marquee Mask */
+      .mask-linear-fade {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+    </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>
